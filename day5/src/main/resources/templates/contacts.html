@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact List</title>
+</head>
+
+<body>
+
+
+    <h1>Contact List</h1>
+
+    <ol>
+        <li data-th-each="contactID : ${contactInfos}">
+            <a data-th-href = "@{/contact/{i}(i = ${contactID},formatt = summary)}">
+                <span data-th-text="${contactID}"></span>
+
+                <form method="POST" action="/delete" >
+                    <input type="hidden" name="contactId" data-th-value="${contactID}">
+                    <button type="submit">Delete</button>
+                </form>
+            </a>
+        </li>
+    </ol>
+    
+
+    <a href="/index.html">Add more contacts</a>
+
+
+
+
+</body>
+
+</html>

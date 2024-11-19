@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+</head>
+
+<body>
+
+    <h1>Contact Information</h1>
+
+    <table data-th-object="${contact}">
+
+        <tbody>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <span data-th-text="*{name}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <span data-th-text="*{email}"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone number:</td>
+                <td>
+                    <span data-th-text="*{phone}"></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
